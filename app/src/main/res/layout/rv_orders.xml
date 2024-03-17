@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Card View widget-->
+<androidx.cardview.widget.CardView
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cv_item_h"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="30dp"
+    android:background="@drawable/black_background_border2"
+    card_view:cardBackgroundColor="#EDFAFF"
+    >
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:background="@drawable/black_background_border2">
+
+        <TextView
+            android:id="@+id/txt_items_rv_orders"
+            android:layout_width="0dp"
+            android:gravity="left|center"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/literata"
+            android:text="Items:"
+            android:textColor="@color/white"
+            android:textSize="19dp"
+            android:textStyle="bold"
+            card_view:layout_constraintEnd_toStartOf="@+id/txt_orderNo_rv_orders"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txt_orderNo_rv_orders"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/literata"
+            android:text="Order No: 1"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="19dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:background="@drawable/brown_circle_bacground"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:textStyle="bold"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_item_rv_orders"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="20dp"
+            android:scrollbars="vertical"
+            card_view:layout_constraintBottom_toTopOf="@+id/txt_udetail_rv_orders"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toBottomOf="@+id/txt_items_rv_orders"
+            tools:listitem="@layout/rv_item_orders" />
+
+        <TextView
+            android:id="@+id/txt_udetail_rv_orders"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/literata"
+            android:text="Customer Details:"
+            android:textColor="@color/white"
+            android:textSize="19dp"
+            android:textStyle="bold"
+            card_view:layout_constraintBottom_toTopOf="@+id/constraintLayout1"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/brown_circle_bacground"
+            card_view:layout_constraintBottom_toTopOf="@+id/txt_pdetail_rv_orders"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintStart_toStartOf="parent">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:layout_constraintBottom_toBottomOf="parent"
+                card_view:layout_constraintEnd_toEndOf="parent"
+                card_view:layout_constraintStart_toStartOf="parent"
+                card_view:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/txt_name_ds"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/literata"
+                    android:gravity="center|left"
+                    android:paddingLeft="10dp"
+                    android:text="Name:"
+                    android:textColor="@color/white"
+                    android:textSize="16dp"
+                    card_view:layout_constraintBottom_toBottomOf="parent"
+                    card_view:layout_constraintEnd_toStartOf="@+id/guidline2"
+                    card_view:layout_constraintHorizontal_bias="0.0"
+                    card_view:layout_constraintStart_toStartOf="parent"
+                    card_view:layout_constraintTop_toTopOf="parent"
+                    card_view:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/txt_Name_ds"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="10dp"
+                    android:fontFamily="@font/literata"
+                    android:gravity="center|left"
+                    android:paddingRight="10dp"
+                    android:text="M.Ali"
+                    android:textColor="@color/white"
+                    android:textSize="16dp"
+                    card_view:layout_constraintBottom_toBottomOf="parent"
+                    card_view:layout_constraintEnd_toEndOf="parent"
+                    card_view:layout_constraintHorizontal_bias="0.0"
+                    card_view:layout_constraintStart_toStartOf="@+id/guidline2"
+                    card_view:layout_constraintTop_toTopOf="parent"
+                    card_view:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/txt_phone_ds"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/literata"
+                    android:gravity="center|left"
+                    android:paddingLeft="10dp"
+                    android:text="Phone No:"
+                    android:textColor="@color/white"
+                    android:textSize="16dp"
+                    card_view:layout_constraintBottom_toBottomOf="parent"
+                    card_view:layout_constraintEnd_toStartOf="@+id/guidline2"
+                    card_view:layout_constraintHorizontal_bias="1.0"
+                    card_view:layout_constraintStart_toStartOf="parent"
+                    card_view:layout_constraintTop_toBottomOf="@+id/txt_name_ds"
+                    card_view:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/txt_Phone_ds"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:fontFamily="@font/literata"
+                    android:gravity="center|left"
+                    android:paddingRight="10dp"
+                    android:text="0321 7989537"
+                    android:textColor="@color/white"
+                    android:textSize="16dp"
+                    card_view:layout_constraintBottom_toBottomOf="@+id/txt_phone_ds"
+                    card_view:layout_constraintEnd_toEndOf="parent"
+                    card_view:layout_constraintHorizontal_bias="0.0"
+                    card_view:layout_constraintStart_toStartOf="@+id/guidline2"
+                    card_view:layout_constraintTop_toBottomOf="@+id/txt_Name_ds"
+                    card_view:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/txt_address_ds"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="47dp"
+                    android:fontFamily="@font/literata"
+                    android:gravity="center|left"
+                    android:paddingLeft="10dp"
+                    android:text="Address:"
+                    android:textColor="@color/white"
+                    android:textSize="16dp"
+                    card_view:layout_constraintBottom_toBottomOf="@+id/txt_Address_ds"
+                    card_view:layout_constraintEnd_toStartOf="@+id/guidline2"
+                    card_view:layout_constraintHorizontal_bias="0.0"
+                    card_view:layout_constraintStart_toStartOf="parent"
+                    card_view:layout_constraintTop_toBottomOf="@+id/txt_phone_ds"
+                    card_view:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/txt_Address_ds"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:fontFamily="@font/literata"
+                    android:gravity="left"
+                    android:paddingRight="10dp"
+                    android:text="Gosha e Ahbab phase 2, near Azam Garden, Multan Road Lahore"
+                    android:textColor="@color/white"
+                    android:textSize="16dp"
+                    card_view:layout_constraintBottom_toBottomOf="parent"
+                    card_view:layout_constraintEnd_toEndOf="parent"
+                    card_view:layout_constraintHorizontal_bias="0.0"
+                    card_view:layout_constraintStart_toStartOf="@+id/guidline2"
+                    card_view:layout_constraintTop_toBottomOf="@+id/txt_Phone_ds"
+                    card_view:layout_constraintVertical_bias="0.0" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guidline2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    card_view:layout_constraintGuide_percent="0.3" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/txt_pdetail_rv_orders"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/literata"
+            android:text="Payment Details:"
+            android:textColor="@color/white"
+            android:textSize="19dp"
+            android:textStyle="bold"
+            card_view:layout_constraintBottom_toTopOf="@+id/constraintLayout3"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/brown_circle_bacground"
+            card_view:layout_constraintBottom_toTopOf="@+id/txt_status_rv_orders"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintStart_toStartOf="parent">
+
+
+            <TextView
+                android:id="@+id/txt_price_ds"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/literata"
+                android:gravity="center|left"
+                android:paddingLeft="10dp"
+                android:text="Price:"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                card_view:layout_constraintBottom_toBottomOf="parent"
+                card_view:layout_constraintEnd_toStartOf="@+id/guidline1"
+                card_view:layout_constraintHorizontal_bias="0.0"
+                card_view:layout_constraintStart_toStartOf="parent"
+                card_view:layout_constraintTop_toTopOf="parent"
+                card_view:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/txt_Price_ds"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:fontFamily="@font/literata"
+                android:gravity="center|right"
+                android:paddingRight="10dp"
+                android:text="780 Rs"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                card_view:layout_constraintBottom_toBottomOf="parent"
+                card_view:layout_constraintEnd_toEndOf="parent"
+                card_view:layout_constraintHorizontal_bias="0.0"
+                card_view:layout_constraintStart_toStartOf="@+id/guidline1"
+                card_view:layout_constraintTop_toTopOf="parent"
+                card_view:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/txt_dcharge_ds"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/literata"
+                android:gravity="center|left"
+                android:paddingLeft="10dp"
+                android:text="Delivery Charges:"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                card_view:layout_constraintBottom_toBottomOf="parent"
+                card_view:layout_constraintEnd_toStartOf="@+id/guidline1"
+                card_view:layout_constraintHorizontal_bias="1.0"
+                card_view:layout_constraintStart_toStartOf="parent"
+                card_view:layout_constraintTop_toBottomOf="@+id/txt_price_ds"
+                card_view:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/txt_DCharge_ds"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:fontFamily="@font/literata"
+                android:gravity="center|right"
+                android:paddingRight="10dp"
+                android:text="20 Rs"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                card_view:layout_constraintBottom_toBottomOf="parent"
+                card_view:layout_constraintEnd_toEndOf="parent"
+                card_view:layout_constraintHorizontal_bias="0.0"
+                card_view:layout_constraintStart_toStartOf="@+id/guidline1"
+                card_view:layout_constraintTop_toBottomOf="@+id/txt_Price_ds"
+                card_view:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/txt_total_ds"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/literata"
+                android:gravity="center|left"
+                android:paddingLeft="10dp"
+                android:text="Total:"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                card_view:layout_constraintBottom_toBottomOf="parent"
+                card_view:layout_constraintEnd_toStartOf="@+id/guidline1"
+                card_view:layout_constraintHorizontal_bias="0.0"
+                card_view:layout_constraintStart_toStartOf="parent"
+                card_view:layout_constraintTop_toBottomOf="@+id/txt_dcharge_ds"
+                card_view:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/txt_Total_ds"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:fontFamily="@font/literata"
+                android:gravity="center|right"
+                android:paddingRight="10dp"
+                android:text="800 Rs"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                card_view:layout_constraintBottom_toBottomOf="parent"
+                card_view:layout_constraintEnd_toEndOf="parent"
+                card_view:layout_constraintHorizontal_bias="0.0"
+                card_view:layout_constraintStart_toStartOf="@+id/guidline1"
+                card_view:layout_constraintTop_toTopOf="@+id/txt_total_ds"
+                card_view:layout_constraintVertical_bias="0.0" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidline1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                card_view:layout_constraintGuide_percent="0.5" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <TextView
+            android:id="@+id/txt_status_rv_orders"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/literata"
+            android:text="Delivery Status:"
+            android:textColor="@color/white"
+            android:textSize="19dp"
+            android:textStyle="bold"
+            card_view:layout_constraintBottom_toTopOf="@+id/constraintLayout4"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintStart_toStartOf="parent" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/brown_circle_bacground"
+            card_view:layout_constraintBottom_toTopOf="@+id/btn_finish"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="30dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            card_view:layout_constraintStart_toStartOf="parent">
+
+
+
+            <EditText
+                android:id="@+id/et_status_rv_orders"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/edit_text_background"
+                android:ems="20"
+                android:gravity="center"
+                android:hint="Status"
+                android:inputType="textEmailAddress"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/black"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"
+                android:textColorHint="#918E8E"
+                android:textSize="16dp"
+                card_view:layout_constraintBottom_toBottomOf="parent"
+                card_view:layout_constraintEnd_toStartOf="@+id/btn_update_rv_orders"
+                card_view:layout_constraintStart_toStartOf="parent"
+                card_view:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btn_update_rv_orders"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:gravity="center"
+                android:text="Update"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                android:background="@drawable/yellow_button_background"
+                card_view:layout_constraintBottom_toBottomOf="parent"
+                card_view:layout_constraintEnd_toEndOf="parent"
+                card_view:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <Button
+            android:id="@+id/btn_finish"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/yellow_button_background"
+            android:gravity="center"
+            android:text="Finish"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

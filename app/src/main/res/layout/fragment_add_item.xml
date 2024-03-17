@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Activities.AddItemFragment"
+    android:background="#EDFAFF">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="#EDFAFF">
+<TextView
+    android:id="@+id/txt_title"
+    android:layout_width="match_parent"
+    android:layout_height="30dp"
+    android:fontFamily="@font/literata"
+    android:gravity="center"
+    android:layout_marginTop="20dp"
+    android:text="Add Item"
+    android:textAlignment="center"
+    android:textColor="#000000"
+    android:textSize="20dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+    android:id="@+id/img_item_ai"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:elevation="10dp"
+    android:src="@drawable/logo_add_image"
+    android:layout_margin="20dp"
+    app:layout_constraintBottom_toTopOf="@+id/guidline"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/txt_title" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.35"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/black_background_border2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guidline"
+        app:layout_constraintVertical_bias="0.0">
+
+        <ScrollView
+            android:id="@+id/scrollView2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_add_ai"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="20dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guidline1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.35" />
+
+                <TextView
+                    android:id="@+id/txt_Name_item_ai"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center|left"
+                    android:text="Name:  "
+                    android:textColor="@color/white"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@+id/guidline1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/et_name_ai"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/edit_text_background"
+                    android:ems="20"
+                    android:gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:hint="Name"
+                    android:inputType="textAutoCorrect"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="#918E8E"
+                    android:textSize="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/guidline1"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/txt_Price_item_ai"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center|left"
+                    android:text="Price:  "
+                    android:textColor="@color/white"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@+id/guidline1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_Name_item_ai" />
+
+                <EditText
+                    android:id="@+id/et_price_ai"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/edit_text_background"
+                    android:ems="20"
+                    android:gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:hint="Price"
+                    android:inputType="number"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="#918E8E"
+                    android:textSize="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/guidline1"
+                    app:layout_constraintTop_toBottomOf="@+id/et_name_ai" />
+
+                <TextView
+                    android:id="@+id/txt_Category_item_ai"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center|left"
+                    android:text="Category:  "
+                    android:textColor="@color/white"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@+id/guidline1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_Price_item_ai" />
+
+                <EditText
+                    android:id="@+id/et_category_ai"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/edit_text_background"
+                    android:ems="20"
+                    android:gravity="center"
+                    android:hint="Category"
+                    android:layout_marginTop="20dp"
+                    android:inputType="textAutoCorrect"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="#918E8E"
+                    android:textSize="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/guidline1"
+                    app:layout_constraintTop_toBottomOf="@+id/et_price_ai" />
+
+                <TextView
+                    android:id="@+id/txt_description_item_ai"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center|left"
+                    android:text="Description:"
+                    android:textColor="@color/white"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_Category_item_ai" />
+
+                <EditText
+                    android:id="@+id/et_description_ad"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/edit_text_background"
+                    android:ems="20"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:hint="Description"
+                    android:inputType="textAutoCorrect"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="#918E8E"
+                    android:textSize="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_description_item_ai" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+
+
+        <Button
+            android:id="@+id/btn_add_ai"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/yellow_button_background"
+            android:gravity="center"
+            android:text="Add"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:indeterminateTint="#FF9900"
+        android:progressTint="#FF9900"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:indeterminate="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
